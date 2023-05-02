@@ -1,0 +1,150 @@
+.app__header {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.app__navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-black);
+  padding: 1rem 2rem;
+}
+
+.app__navbar-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.app__navbar-logo img {
+  width: 150px;
+}
+
+.app__navbar-links {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app__navbar-links li {
+  margin-inline: 1rem;
+  cursor: pointer;
+}
+
+.app__navbar-links li:hover {
+  color: var(--color-grey);
+}
+
+.app__navbar-login {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.app__navbar-login a, .app__navbar-login p {
+  margin: 0 1rem;
+  text-decoration: none;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.app__navbar-login a:hover, .app__navbar-login p:hover {
+  border-bottom: 1px solid var(--color-golden);
+}
+
+.app__navbar-login div {
+  width: 1px;
+  height: 30px;
+  background-color: var(--color-grey);
+}
+
+.app__navbar-smallscreen {
+  display: none;
+}
+
+.app__navbar-smallscreen svg {
+  cursor: pointer;
+}
+
+.app__navbar-smallscreen_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--color-black);
+  transition: 0.5s ease;
+  flex-direction: column;
+  z-index: 5;
+}
+
+.app__navbar-smallscreen_overlay .app__navbar-links {
+  flex-direction: column;
+}
+
+.app__navbar-smallscreen_overlay .app__navbar-links li {
+  font-family: var(--font-base);
+  color: var(--color-golden);
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  margin: 2rem;
+}
+
+.app__navbar-smallscreen_overlay .overlay__close {
+  font-size: 27px;
+  color: var(--color-golden);
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.app__navbar-arrow {
+  display: flex;
+  transform: translateX(100px);
+  cursor: pointer;
+  transition: 1s ease;
+}
+
+.app__navbar-arrow p {
+  margin-left: 1rem;
+}
+
+.app__navbar-arrow:hover {
+  transform: translateX(0);
+}
+
+.app__navbar-arrow svg {
+  color: #fff;
+  cursor: pointer;
+}
+
+.app__navbar-arrow:hover svg {
+  color: var(--color-golden);
+}
+
+@media screen and (max-width: 1000px) {
+  .app__navbar-links, .app__navbar-login {
+    display: none;
+  }
+
+  .app__navbar-smallscreen, .app__navbar-smallscreen_overlay .app__navbar-links {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__navbar-login {
+    display: none;
+  }
+
+  .app__navbar-logo img {
+    width: 100px;
+  }
+}

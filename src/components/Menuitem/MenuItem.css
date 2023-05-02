@@ -1,0 +1,42 @@
+.app__menu-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.app__menu-item_heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-base);
+  /* white-space: nowrap; */
+}
+
+.app__menu-item_heading h4 {
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #fff;
+}
+
+h4.app__menu-item_heading-title {
+  color: var(--color-golden);
+  flex: 1;
+}
+
+.app__menu-item_heading-line {
+  width: 90px;
+  height: 1px;
+  background: var(--color-golden);
+  margin: 0 1rem;
+}
+
+@media screen and (max-width: 500px) {
+  .app__menu-item_heading-line {
+    width: 10%;
+  }
+}

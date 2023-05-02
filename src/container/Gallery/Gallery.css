@@ -1,0 +1,140 @@
+.app__gallery {
+  background: var(--color-black);
+  padding: 4rem 0 4rem 6rem;
+}
+
+.app__gallery-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1;
+  min-width: 500px;
+  padding-right: 2rem;
+}
+
+.app__gallery-photos {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  height: 500px;
+}
+
+.app__gallery-photos_card {
+  position: relative;
+  height: 500px;
+}
+
+.app__gallery-photos_card img {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  transition: .5s ease;
+}
+
+.app__gallery-photos_arrow-container {
+  border: 1px solid var(--color-golden);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+  width: 10%;
+}
+
+.gallery__arrow-icon {
+  color: var(--color-golden);
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s ease;
+}
+
+.app__gallery-photos_arrow-container:hover {
+  background: var(--color-golden);
+}
+
+.app__gallery-photos_arrow-container:hover .gallery__arrow-icon{
+  color: var(--color-black);
+}
+
+.app__gallery-photos_instagram {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.gallery__photo-icon {
+  opacity: 0;
+  font-size: 2rem;
+  color: var(--color-golden);
+  transition: 0.5s ease;
+}
+
+.app__gallery-photos_card:hover img {
+  opacity: .35;
+}
+
+.app__gallery-photos_instagram:hover .gallery__photo-icon {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1050px) {
+  .app__gallery {
+    flex-direction: column;
+    padding: 4rem;
+  }
+
+  .app__gallery-photos {
+    margin: 5rem 0;
+  } 
+
+  .app__gallery-photos_arrow-container {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__gallery {
+    padding: 0;
+  }
+
+  .app__gallery-content {
+    min-width: 100%;
+    padding: 2rem;
+  }
+
+  .app__gallery-photos {
+    min-width: 100%;
+  }
+
+  .app__gallery-photos_arrow-container {
+    display: none;
+  }
+
+  .app__gallery-photos_card {
+    width: 100%;
+    opacity: 0.6;
+    height: 450px;
+  }
+
+  .app__gallery-photos_card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: aparecer 1s alternate;
+  }
+
+  .app__gallery-photos_card:hover img {
+    opacity: 1;
+  }
+
+  .app__gallery-photos_instagram, .gallery__photo-icon {
+    display: none !important;
+  }
+}

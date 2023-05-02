@@ -1,0 +1,57 @@
+.app__welcome {
+  background: var(--color-black);
+} 
+
+.app__welcome-h1 {
+  color: var(--color-golden);
+  font-family: var(--font-base);
+  font-size: 90px;
+  font-weight: 700;
+  line-height: 117px;
+  letter-spacing: 0.04em;
+  text-align: left;
+}
+
+.app__welcome p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: var(--color-grey);
+}
+
+.app__welcome-img.app__welcome-img {
+  justify-content: flex-end;
+}
+
+.app__welcome-img img {
+  width: 80%;
+}
+
+@media screen and (min-width: 2000px) {
+  .app__welcome-h1 {
+      font-size: 180px;
+      line-height: 210px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .app__welcome-h1 {
+      font-size: 90px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__welcome-h1 {
+      font-size: 70px;
+      line-height: 87px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__header-h1 {
+      font-size: 50px;
+      line-height: 70px;
+  }
+}
